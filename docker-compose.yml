@@ -9,7 +9,7 @@ services:
        MYSQL_DATABASE: appdb
 
       volumes:
-       - ./database/init.sql:/docker-entrypoint-initdb/init.sql
+       - ./database/init.sql:/docker-entrypoint-initdb.d/init.sql
        - database-bridge-vol:/var/lib/mysql
       
       healthcheck:
